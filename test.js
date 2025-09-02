@@ -1,1 +1,1 @@
-alert("TEST");
+alert("XSS AISI");
